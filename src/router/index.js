@@ -31,6 +31,16 @@ export default new Router({
       path: '/simple-dynamic',
       name: 'SimpleDynamic',
       component: () => import('@/components/SimpleDynamic')
+    },
+    {
+      path: '/props-example',
+      name: 'PropsExample',
+      component: () => import('@/components/PropsExample')
+    },
+    {
+      path: '/gpa-tracker',
+      name: 'GpaTracker',
+      component: () => import('@/components/gpa-tracker/GpaTracker')
     }
   ]
 });
