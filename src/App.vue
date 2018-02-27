@@ -1,24 +1,52 @@
 <template>
   <container id="app">
-    <ul>
-  <li><router-link to="/">~/</router-link></li>
-  <li><router-link to="/simple-syntax">Simple Syntax</router-link></li>
-  <li><router-link to="/dynamic-form">Dynamic Form</router-link></li>
-  <li><router-link to="/simple-dynamic">Simple Dynamic</router-link></li>
-  <li><router-link to="/lazy">Lazy Route</router-link></li>
-</ul>
+    <NavLinks v-bind:links="links" />
     <router-view/>
   </container>
 </template>
 
 <script>
+import NavLinks from '@/components/NavLinks';
+
 export default {
-  name: 'App'
+  components: { NavLinks },
+  name: 'App',
+  data() {
+    return {
+      links: [{
+        src: '/',
+        description: '~/'
+
+      }, {
+        src: '/simple-syntax',
+        description: 'Simple Syntax'
+      }, {
+        src: '/dynamic-form',
+        description: 'Dynamic Form'
+      },
+      {
+        src: '/simple-dynamic',
+        description: 'Simple Dynamic'
+      },
+      {
+        src: '/props-example',
+        description: 'Props'
+      },
+      {
+        src: '/lazy',
+        description: 'Lazy Route'
+      },
+      {
+        src: '/gpa-tracker',
+        description: 'GPA Tracker'
+      }]
+    };
+  }
 };
 </script>
 
 <style lang="css">
-    @import "../node_modules/bulma/css/bulma.css";
+@import '../node_modules/bulma/css/bulma.css';
 </style>
 <style scoped>
 h1,

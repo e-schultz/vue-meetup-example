@@ -1,6 +1,6 @@
 <template>
   <container>
-   <div class="content">
+    <div class="content">
       <h1>Hello VueJS Toronto</h1>
       <p>
         This is a bit of a toy / sandbox app I've been using to explore VueJS. This app might change and evolve over time, but has been a bit of me trying to answer to myself:
@@ -9,16 +9,21 @@
         How would I do that in Vue?
       </blockquote>
       <p>
-        From exploring the <router-link to="/simple-syntax">Delcaritve Syntax and DataBinding</router-link>, to how easy <router-link to="/lazy">Lazy Loading</router-link> routes and components to be.
+        From exploring the
+        <a v-bind:href="syntaxLink"
+           v-bind:title="syntaxTitle">Delcaritve Syntax and DataBinding</a>, to how easy
+        <router-link to="/lazy">Lazy Loading</router-link> routes and components to be.
       </p>
       <p>
-        To the basics of <router-link to="/simple-dynamic">Leveraging Dynamic Components</router-link>, or seeing how easy it is to expand that concept for <router-link to="/dynamic-form">Dynamic Form Generation.</router-link>
+        To the basics of
+        <router-link to="/simple-dynamic">Leveraging Dynamic Components</router-link>, or seeing how easy it is to expand that concept for
+        <router-link to="/dynamic-form">Dynamic Form Generation.</router-link>
       </p>
       <p>
         I hope you find it useful, and if there is a better way to approach things - let me know. Thanks for taking a look.
       </p>
 
-   </div>
+    </div>
 
   </container>
 </template>
@@ -35,6 +40,8 @@ export default {
   // ....
   data() {
     return {
+      syntaxLink: '/#/simple-syntax',
+      syntaxTitle: 'Examples Demonstrating the Declarative Syntax in VueJS',
       msg: 'Welcome to Your Vue.js App',
       showLazy: false
     };
